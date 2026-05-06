@@ -1,0 +1,2271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pink Dream Nails & Beauty - Cutler Bay (US1)</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%23d47a96'/><text x='50' y='68' font-size='60' fill='white' text-anchor='middle' font-family='Arial,sans-serif' font-weight='bold'>P</text></svg>">
+    
+    <!-- OG Meta Tags -->
+    <meta property="og:title" content="Pink Dream Nails & Beauty - Cutler Bay (US1)">
+    <meta property="og:description" content="Highly-rated nail salon in Miami offering premium acrylics, gel manicures, and luxurious pedicures. Open 7 days a week.">
+    <meta property="og:image" content="./image-1.jpg">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* CSS Variables - Custom 5-Color Palette */
+        :root {
+            --primary: #d47a96; /* Rose Gold / Soft Pink */
+            --primary-dark: #b55a77;
+            --accent: #471f2d; /* Deep Burgundy */
+            --bg-color: #fcfbf9; /* Warm Cream */
+            --surface: #ffffff;
+            --text-dark: #1a1a1a;
+            --text-light: #666666;
+            --glass-bg: rgba(255, 255, 255, 0.85);
+            --glass-border: rgba(212, 122, 150, 0.2);
+            --shadow-soft: 0 20px 40px rgba(71, 31, 45, 0.08);
+            --shadow-glow: 0 10px 30px rgba(212, 122, 150, 0.3);
+            
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Inter', sans-serif;
+            
+            --radius-lg: 32px;
+            --radius-md: 24px;
+            --radius-sm: 12px;
+            
+            --booking-url: "https://app.squareup.com/appointments/book/tqs8lmfwm81d8d/LEBAE3WWPA78W/start?rwg_token=AFd1xnFzKDfVbPLmzByyUChTh20QBnvDZ9hYVVmKr62BYcXkEfsivos2nUFxboUdi8EIlk-kA86sv0mHV5b8HcqAbRVUtwcksw%3D%3D";
+        }
+
+        /* Reset & Base */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--bg-color);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            color: var(--accent);
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .eyebrow {
+            font-family: var(--font-body);
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--primary);
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        /* Preloader */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--accent);
+            z-index: 99999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.8s ease, visibility 0.8s ease;
+        }
+        
+        .preloader-text {
+            font-family: var(--font-heading);
+            color: var(--primary);
+            font-size: clamp(1.5rem, 5vw, 3.5rem);
+            padding: 0 2rem;
+            text-align: center;
+            word-break: break-word;
+            max-width: 90vw;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; transform: scale(0.98); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+            background: transparent;
+            transition: all 0.4s ease;
+        }
+
+        nav.scrolled {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 1rem 5%;
+            box-shadow: var(--shadow-soft);
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 102;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s ease;
+            white-space: nowrap;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .badge-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.7rem;
+            padding: 4px 12px;
+            border-radius: 999px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            background: rgba(0,0,0,0.05);
+            text-transform: uppercase;
+        }
+
+        .badge-status.open { color: #10b981; background: rgba(16, 185, 129, 0.1); }
+        .badge-status.closed { color: #ef4444; background: rgba(239, 68, 68, 0.1); }
+        .status-dot { width: 8px; height: 8px; border-radius: 50%; }
+        .badge-status.open .status-dot { background: #10b981; animation: pulse-dot 2s infinite; }
+        .badge-status.closed .status-dot { background: #ef4444; }
+
+        @keyframes pulse-dot {
+            0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.4); }
+            70% { box-shadow: 0 0 0 6px rgba(16, 185, 129, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2.5rem;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            border: none;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: var(--shadow-glow);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: scale(1.02) translateY(-2px);
+            box-shadow: 0 15px 35px rgba(212, 122, 150, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+        }
+
+        .btn-outline:hover {
+            background: var(--accent);
+            color: white;
+            transform: scale(1.02) translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: clamp(8rem, 15vh, 12rem) 5% clamp(4rem, 10vh, 8rem);
+            gap: 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            flex: 1;
+            z-index: 10;
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 6vw, 5.5rem);
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+            opacity: 0;
+        }
+
+        .hero p {
+            font-size: clamp(1.1rem, 2vw, 1.3rem);
+            margin-bottom: 2.5rem;
+            opacity: 0;
+        }
+        
+        .hero .eyebrow { opacity: 0; }
+
+        .hero .btn-group {
+            display: flex;
+            gap: 1rem;
+            opacity: 0;
+        }
+
+        .hero-image-wrapper {
+            flex: 1;
+            height: 75vh;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            position: relative;
+            box-shadow: var(--shadow-soft);
+            transform: translateY(0px);
+            animation: float 8s ease-in-out infinite;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            animation: kenburns 20s ease-out infinite alternate;
+        }
+
+        @keyframes heroReveal {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+
+        @keyframes kenburns {
+            0% { transform: scale(1); }
+            100% { transform: scale(1.15); }
+        }
+
+        /* Marquee */
+        .marquee-wrapper {
+            background: var(--accent);
+            color: var(--primary);
+            padding: 1.5rem 0;
+            overflow: hidden;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+        }
+
+        .marquee {
+            display: inline-block;
+            animation: marquee 30s linear infinite;
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-style: italic;
+            letter-spacing: 2px;
+        }
+
+        .marquee span {
+            margin: 0 2rem;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Sections General */
+        section {
+            padding: clamp(6rem, 12vh, 10rem) 5%;
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+        }
+
+        /* Scroll Reveal */
+        .reveal {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .reveal.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6rem;
+            align-items: center;
+        }
+
+        .about-image {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            position: relative;
+        }
+        
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: 20px;
+            bottom: 20px;
+            border: 2px solid var(--primary);
+            border-radius: var(--radius-lg);
+            z-index: -1;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: var(--radius-lg);
+        }
+
+        /* Stats Section */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            background: var(--surface);
+            padding: 4rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+            margin-top: -4rem;
+            position: relative;
+            z-index: 10;
+        }
+
+        .stat-card {
+            text-align: center;
+        }
+
+        .stat-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .stat-number {
+            font-family: var(--font-heading);
+            font-size: 3rem;
+            color: var(--accent);
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-light);
+        }
+
+        /* Why Choose Us */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 3rem;
+        }
+
+        .feature-card {
+            background: var(--surface);
+            padding: 3rem 2rem;
+            border-radius: var(--radius-md);
+            text-align: center;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(212, 122, 150, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(30px);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            transition: all 0.4s ease;
+            position: relative;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-glow);
+            border-color: var(--primary);
+        }
+
+        .service-img {
+            height: 250px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .service-content {
+            padding: 2rem;
+        }
+
+        .service-price {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--surface);
+            color: var(--accent);
+            padding: 0.5rem 1rem;
+            border-radius: 999px;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Menu / Pricing */
+        .menu-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--surface);
+            padding: 4rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 1.5rem;
+        }
+
+        .menu-name {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: var(--accent);
+            font-weight: 600;
+        }
+
+        .menu-leader {
+            flex: 1;
+            border-bottom: 2px dotted var(--text-light);
+            margin: 0 1rem;
+            opacity: 0.3;
+        }
+
+        .menu-price {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        /* Newsletter */
+        .newsletter-section {
+            background: var(--accent);
+            color: white;
+            text-align: center;
+            border-radius: var(--radius-lg);
+            margin: 0 5%;
+            padding: 5rem 2rem;
+        }
+
+        .newsletter-section h2 {
+            color: white;
+        }
+
+        .newsletter-form {
+            display: flex;
+            max-width: 500px;
+            margin: 2rem auto 0;
+            gap: 1rem;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 1rem 1.5rem;
+            border-radius: 999px;
+            border: none;
+            outline: none;
+            font-family: var(--font-body);
+            font-size: 1rem;
+        }
+
+        /* Team */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .team-card {
+            text-align: center;
+        }
+
+        .team-img {
+            width: 100%;
+            aspect-ratio: 3/4;
+            object-fit: cover;
+            border-radius: var(--radius-md);
+            margin-bottom: 1.5rem;
+            transition: transform 0.4s ease;
+        }
+
+        .team-card:hover .team-img {
+            transform: scale(1.03);
+        }
+
+        /* Bento Gallery */
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 300px 300px 300px;
+            gap: 1rem;
+        }
+
+        .bento-item {
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bento-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1), filter 0.6s ease;
+            filter: grayscale(20%);
+        }
+
+        .bento-item:hover img {
+            transform: scale(1.08);
+            filter: grayscale(0%);
+        }
+
+        .bento-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(71, 31, 45, 0.8), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: 2rem;
+        }
+
+        .bento-item:hover .bento-overlay {
+            opacity: 1;
+        }
+
+        .span-2x2 { grid-column: span 2; grid-row: span 2; }
+        .span-2x1 { grid-column: span 2; grid-row: span 1; }
+        .span-1x2 { grid-column: span 1; grid-row: span 2; }
+
+        /* Social Feed */
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1rem;
+        }
+
+        .social-item {
+            aspect-ratio: 1;
+            border-radius: var(--radius-sm);
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .social-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .social-hover {
+            position: absolute;
+            inset: 0;
+            background: rgba(71, 31, 45, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            color: white;
+            font-size: 1.2rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .social-item:hover img { transform: scale(1.1); }
+        .social-item:hover .social-hover { opacity: 1; }
+
+        /* Spotlight */
+        .spotlight-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+        .spotlight-card {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+        .spotlight-card img {
+            width: 100%;
+            height: 500px;
+            object-fit: cover;
+        }
+        .spotlight-badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--surface);
+            padding: 0.5rem 1.5rem;
+            border-radius: 999px;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        /* Reviews */
+        .reviews-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .review-card {
+            background: var(--surface);
+            padding: 3rem 2rem;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-soft);
+            position: relative;
+        }
+
+        .review-card::before {
+            content: '\201C';
+            font-family: var(--font-heading);
+            font-size: 6rem;
+            color: rgba(212, 122, 150, 0.1);
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            line-height: 1;
+        }
+
+        .stars {
+            color: gold;
+            margin-bottom: 1rem;
+        }
+
+        /* Map & Hours */
+        .location-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hours-card {
+            background: var(--surface);
+            padding: 3rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-soft);
+        }
+
+        .hours-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
+        .hours-row:last-child { border-bottom: none; }
+
+        /* FAQ */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--surface);
+            margin-bottom: 1rem;
+            border-radius: var(--radius-sm);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .faq-answer {
+            padding: 0 2rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 0 2rem 1.5rem;
+            max-height: 200px;
+        }
+        
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        /* Final CTA */
+        .final-cta {
+            background-image: linear-gradient(rgba(71, 31, 45, 0.8), rgba(71, 31, 45, 0.9)), url('./image-15.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            text-align: center;
+            color: white;
+            padding: 8rem 5%;
+            border-radius: var(--radius-lg);
+            margin: 0 5% 4rem;
+        }
+
+        .final-cta h2 {
+            color: white;
+            font-size: clamp(3rem, 6vw, 5rem);
+            margin-bottom: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--accent);
+            color: white;
+            padding: 6rem 5% 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1.5fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .footer-logo {
+            font-family: var(--font-heading);
+            font-size: 2rem;
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 1.5rem;
+        }
+
+        footer h4 {
+            color: var(--primary);
+            font-family: var(--font-body);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        footer ul a {
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        footer ul a:hover {
+            color: white;
+        }
+        
+        .qr-code {
+            width: 120px;
+            height: 120px;
+            border-radius: 12px;
+            background: white;
+            padding: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-socials a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: background 0.3s;
+        }
+
+        .footer-socials a:hover {
+            background: var(--primary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 2rem;
+            text-align: center;
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Sticky Sidebar */
+        .sticky-sidebar {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            z-index: 99;
+        }
+
+        .sticky-sidebar a {
+            width: 50px;
+            height: 50px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--glass-border);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent);
+            font-size: 20px;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s ease;
+        }
+
+        .sticky-sidebar a:hover {
+            background: var(--primary);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        /* Chat Widget */
+        .chat-widget {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 9999;
+        }
+
+        .chat-fab {
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            box-shadow: var(--shadow-glow);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
+            animation: pulse-dot 2s infinite;
+        }
+        
+        .chat-fab:hover { transform: scale(1.1); }
+
+        .chat-panel {
+            position: absolute;
+            bottom: 85px;
+            right: 0;
+            width: 350px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(30px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            box-shadow: var(--shadow-soft);
+            overflow: hidden;
+            transform: scale(0.8) translateY(20px);
+            opacity: 0;
+            pointer-events: none;
+            transition: transform 0.3s cubic-bezier(0.4,0,0.2,1), opacity 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-panel.open {
+            transform: scale(1) translateY(0);
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        .chat-header {
+            background: var(--accent);
+            color: white;
+            padding: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            position: relative;
+        }
+
+        .chat-header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .chat-header h4 { margin: 0; color: white; font-size: 1rem; font-family: var(--font-body); }
+        .chat-header .online-dot { display: inline-block; width: 8px; height: 8px; background: #10b981; border-radius: 50%; margin-right: 5px; }
+        
+        .chat-close {
+            position: absolute;
+            top: 1.2rem;
+            right: 1.2rem;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .chat-body {
+            padding: 1.5rem;
+            height: 250px;
+            overflow-y: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            background: var(--surface);
+        }
+
+        .chat-bubble {
+            max-width: 85%;
+            padding: 1rem;
+            border-radius: 16px;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .chat-bubble.incoming {
+            background: #f0f0f0;
+            color: var(--text-dark);
+            align-self: flex-start;
+            border-bottom-left-radius: 4px;
+        }
+        
+        .chat-bubble.outgoing {
+            background: var(--primary);
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 4px;
+        }
+
+        .chat-bubble small {
+            display: block;
+            font-size: 0.7rem;
+            margin-top: 5px;
+            opacity: 0.7;
+        }
+
+        .chat-quick-replies {
+            padding: 0 1.5rem 1rem;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            background: var(--surface);
+        }
+
+        .chat-quick-replies button {
+            background: white;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            padding: 0.4rem 0.8rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .chat-quick-replies button:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .chat-input {
+            padding: 1rem;
+            border-top: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            gap: 0.5rem;
+            background: white;
+        }
+
+        .chat-input input {
+            flex: 1;
+            border: none;
+            background: #f5f5f5;
+            padding: 0.8rem 1rem;
+            border-radius: 999px;
+            outline: none;
+        }
+
+        .chat-input button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+
+        /* Promo Popup */
+        .promo-popup {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.8);
+            backdrop-filter: blur(5px);
+            z-index: 100000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .promo-content {
+            background: var(--surface);
+            padding: 4rem;
+            border-radius: var(--radius-lg);
+            text-align: center;
+            max-width: 500px;
+            position: relative;
+            animation: popupIn 0.5s cubic-bezier(0.4,0,0.2,1);
+        }
+
+        @keyframes popupIn {
+            from { transform: scale(0.9) translateY(20px); opacity: 0; }
+            to { transform: scale(1) translateY(0); opacity: 1; }
+        }
+
+        .promo-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--text-light);
+        }
+
+        /* Mobile Sticky CTA */
+        .mobile-sticky-cta {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: var(--surface);
+            padding: 15px;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+            z-index: 9998;
+            display: none;
+        }
+
+        .mobile-sticky-cta a {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: 1rem;
+            background: var(--accent);
+            color: white;
+            font-weight: 700;
+            border-radius: 12px;
+            text-decoration: none;
+            font-size: 1.1rem;
+        }
+
+        /* Mobile Menu Overlay */
+        .mobile-menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(26, 26, 26, 0.98);
+            backdrop-filter: blur(10px);
+            z-index: 200;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            transform: translateX(100%);
+            transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        .mobile-menu a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-family: var(--font-heading);
+            display: block;
+            padding: 1rem 0;
+        }
+        
+        .mobile-menu-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* MANDATORY GLOBAL OVERRIDES - DO NOT MODIFY */
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { overflow-x: hidden !important; width: 100%; margin: 0; padding: 0; }
+        img, video, iframe { max-width: 100%; height: auto; }
+        a { color: inherit; text-decoration: none; }
+        
+        /* DESKTOP NAV DEFAULTS */
+        nav, header { position: fixed !important; top: 0 !important; left: 0 !important; width: 100% !important; z-index: 9999 !important; display: flex !important; justify-content: space-between !important; align-items: center !important; padding: 1rem 5% !important; background: rgba(252, 251, 249, 0.9) !important; backdrop-filter: blur(20px) !important; box-sizing: border-box !important; }
+        body { padding-top: 0px !important; }
+        .hamburger, .menu-toggle, .mobile-menu-btn { display: none !important; }
+        .sidebar, .side-bar, .sticky-sidebar { display: flex; }
+        section, .section { padding: clamp(4rem, 8vh, 8rem) 5% !important; width: 100% !important; box-sizing: border-box !important; overflow: hidden; }
+        h1, h2, h3 { overflow-wrap: break-word; word-break: break-word; max-width: 100%; }
+
+        /* MOBILE OVERRIDES */
+        @media (max-width: 768px) {
+            nav, header { padding: 15px !important; background: rgba(252, 251, 249, 0.98) !important; border-bottom: 1px solid rgba(0,0,0,0.05); }
+            nav .logo, nav .brand, header .logo { font-size: 1.1rem !important; max-width: 50vw; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; margin-right: auto; }
+            nav .nav-links, nav .desktop-nav, nav ul { display: none !important; }
+            .hamburger, .menu-toggle, .mobile-menu-btn { display: flex !important; align-items: center; justify-content: center; font-size: 24px; color: var(--accent); background: none; border: none; cursor: pointer; z-index: 101; margin-left: 15px; }
+            
+            .hero { min-height: auto !important; padding-top: 130px !important; justify-content: flex-start !important; gap: 2rem !important; }
+            .hero h1, .hero-title { font-size: clamp(2rem, 8vw, 3rem) !important; margin-bottom: 1rem !important; }
+            .hero p, .hero-subtitle { font-size: 1rem !important; margin-bottom: 1.5rem !important; }
+            .hero-image-wrapper { height: 50vh; }
+            
+            [class*="grid"], [class*="row"], .about-grid, .services-grid, .team-grid, .gallery-grid, .bento-grid, .footer-grid, .footer-columns, .hero { grid-template-columns: 1fr !important; display: flex !important; flex-direction: column !important; }
+            [class*="grid"] > *, .bento-grid > *, .gallery-grid > * { grid-column: span 1 !important; grid-row: span 1 !important; width: 100% !important; }
+            
+            footer { padding: 2rem 1rem 100px !important; }
+            .hero-buttons, .hero-cta, .hero .btn-group, .hero-actions { display: flex !important; flex-direction: column !important; align-items: center; width: 100%; padding: 0; }
+            .hero-buttons a, .hero-buttons button, .hero .btn-group a { width: 100% !important; max-width: 320px; text-align: center; box-sizing: border-box; margin: 0 0 15px 0 !important; }
+            
+            [class*="chat-widget"], [class*="floating-chat"], #chat-widget { bottom: 90px !important; right: 15px !important; }
+            .sidebar, .side-bar, .sticky-sidebar { display: none !important; }
+            .cursor-dot, .cursor-outline { display: none !important; }
+            
+            .mobile-sticky-cta { display: block !important; }
+            .stats-grid { margin-top: 2rem; padding: 2rem; }
+            .final-cta { margin: 0 0 2rem; padding: 4rem 1rem; }
+        }
+    
+/* ═══ SITEFLOW: Hero Visibility Safety Net ═══ */
+.hero h1, .hero-title, .hero h2, .hero p, .hero-subtitle,
+.hero .btn-group, .hero-buttons, .hero-cta, .hero-actions,
+.hero .eyebrow, .hero span, .hero a,
+section.hero > *, .hero-content, .hero-content > * {
+  opacity: 1 !important;
+  transform: none !important;
+  visibility: visible !important;
+}
+/* Only allow the hero ANIMATION to run (not scroll-reveal) */
+.hero h1, .hero-title { animation: heroReveal 1s ease forwards !important; }
+.hero p, .hero-subtitle { animation: heroReveal 1s ease 0.2s forwards !important; }
+.hero .btn-group, .hero-buttons, .hero-cta { animation: heroReveal 1s ease 0.4s forwards !important; }
+@keyframes heroReveal { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ═══ SITEFLOW: Tablet Breakpoint ═══ */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero { flex-direction: column !important; }
+  .hero > * { width: 100% !important; }
+  [class*="grid"] { grid-template-columns: repeat(2, 1fr) !important; }
+  section, .section { padding: 3rem 4% !important; }
+  .sidebar, .side-bar, .sticky-sidebar { display: none !important; }
+}
+
+/* ═══ SITEFLOW: Mobile Safety Net ═══ */
+@media (max-width: 768px) {
+  /* Force all grids/flex to stack */
+  .hero, [class*="grid"], [class*="row"], [class*="flex"],
+  .about-grid, .services-grid, .team-grid, .gallery-grid,
+  .bento-grid, .footer-grid, .footer-columns, .stats-grid,
+  .pricing-grid, .faq-grid, .features-grid {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  /* Prevent any element from exceeding screen width */
+  *, *::before, *::after { max-width: 100vw; box-sizing: border-box; }
+  img, video, iframe, canvas { max-width: 100% !important; height: auto !important; }
+  /* Force hide desktop nav, show hamburger */
+  .nav-links, .desktop-nav, nav ul, .nav-menu, .desktop-links {
+    display: none !important;
+  }
+  .hamburger, .menu-toggle, .mobile-menu-btn, .nav-toggle, [class*="hamburger"], [class*="menu-btn"] {
+    display: flex !important;
+  }
+  /* Prevent horizontal scroll */
+  html, body { overflow-x: hidden !important; width: 100% !important; }
+  /* Fix hero on mobile */
+  .hero { min-height: auto !important; padding-top: 120px !important; }
+  .hero h1, .hero-title { font-size: clamp(1.8rem, 7vw, 3rem) !important; line-height: 1.2 !important; }
+  .hero p, .hero-subtitle { font-size: 1rem !important; }
+  /* Hide sidebar on mobile */
+  .sidebar, .side-bar, .sticky-sidebar { display: none !important; }
+  /* Fix chat widget position above mobile CTA */
+  [class*="chat"], #chat-widget, .chat-fab, .floating-chat { bottom: 90px !important; }
+}
+
+</style>
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-text">Pink Dream Nails & Beauty</div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu-close" id="mobileMenuClose">
+            <i class="fas fa-times" style="font-size:28px;color:white;"></i>
+        </button>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reviews">Reviews</a>
+        <a href="https://app.squareup.com/appointments/book/tqs8lmfwm81d8d/LEBAE3WWPA78W/start?rwg_token=AFd1xnFzKDfVbPLmzByyUChTh20QBnvDZ9hYVVmKr62BYcXkEfsivos2nUFxboUdi8EIlk-kA86sv0mHV5b8HcqAbRVUtwcksw%3D%3D" target="_blank" style="color: var(--primary);">Book Now</a>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <a href="#" class="logo">
+            <i class="fas fa-gem" style="color: var(--primary);"></i> Pink Dream
+        </a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#reviews">Reviews</a>
+            <div class="badge-status" id="statusBadge">
+                <span class="status-dot"></span> <span id="statusText">Checking...</span>
+            </div>
+            <a href="https://app.squareup.com/appointments/book/tqs8lmfwm81d8d/LEBAE3WWPA78W/start?rwg_token=AFd1xnFzKDfVbPLmzByyUChTh20QBnvDZ9hYVVmKr62BYcXkEfsivos2nUFxboUdi8EIlk-kA86sv0mHV5b8HcqAbRVUtwcksw%3D%3D" target="_blank" class="btn btn-primary" style="padding: 0.6rem 1.5rem;">Book Now</a>
+        </div>
+        <button class="hamburger" id="hamburgerBtn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Sticky Sidebar -->
+    <div class="sticky-sidebar">
+        <a href="tel:7865424794" aria-label="Call Us"><i class="fas fa-phone"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="eyebrow" style="animation: heroReveal 1s ease forwards; animation-delay: 0.2s;">Cutler Bay's Premier Salon</span>
+            <h1 style="animation: heroReveal 1s ease forwards; animation-delay: 0.4s;">Elevate Your Everyday Style.</h1>
+            <p style="animation: heroReveal 1s ease forwards; animation-delay: 0.6s;">Experience flawless acrylics, masterful gel manicures, and luxurious pedicures in Miami's most highly-rated beauty sanctuary.</p>
+            <div class="btn-group" style="animation: heroReveal 1s ease forwards; animation-delay: 0.8s;">
+                <a href="https://app.squareup.com/appointments/book/tqs8lmfwm81d8d/LEBAE3WWPA78W/start?rwg_token=AFd1xnFzKDfVbPLmzByyUChTh20QBnvDZ9hYVVmKr62BYcXkEfsivos2nUFxboUdi8EIlk-kA86sv0mHV5b8HcqAbRVUtwcksw%3D%3D" target="_blank" class="btn btn-primary">Book Appointment <i class="fas fa-arrow-right"></i></a>
+                <a href="tel:7865424794" class="btn btn-outline">Call (786) 542-4794</a>
+            </div>
+        </div>
+        <div class="hero-image-wrapper">
+            <img src="./image-1.jpg" alt="Pink Dream Nails Salon Interior" class="hero-image">
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee-wrapper">
+        <div class="marquee">
+            <span>FLAWLESS ACRYLICS</span> • <span>LUXURY PEDICURES</span> • <span>GEL MASTERPIECES</span> • <span>CUTLER BAY'S FINEST</span> • <span>FLAWLESS ACRYLICS</span> • <span>LUXURY PEDICURES</span> • <span>GEL MASTERPIECES</span> • <span>CUTLER BAY'S FINEST</span> •
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="about-grid">
+            <div class="about-image reveal">
+                <img src="./image-2.jpg" alt="Nail Technician at work">
+            </div>
+            <div class="about-content reveal">
+                <span class="eyebrow">Our Story</span>
+                <h2>A Sanctuary of Beauty in Cutler Bay</h2>
+                <p>Located conveniently on S Dixie Hwy, Pink Dream Nails & Beauty is more than just a salon—it's a retreat. With a stellar 4.6-star rating from over 300 satisfied clients, we've built our reputation on uncompromising quality and artistic excellence.</p>
+                <p>Whether you're looking for a classic gel manicure, intricate acrylic designs, or a deeply relaxing spa pedicure, our expert technicians are dedicated to bringing your vision to life in a pristine, welcoming environment.</p>
+                <a href="https://app.squareup.com/appointments/book/tqs8lmfwm81d8d/LEBAE3WWPA78W/start?rwg_token=AFd1xnFzKDfVbPLmzByyUChTh20QBnvDZ9hYVVmKr62BYcXkEfsivos2nUFxboUdi8EIlk-kA86sv0mHV5b8HcqAbRVUtwcksw%3D%3D" target="_blank" class="btn btn-outline" style="margin-top: 1rem;">Discover Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section style="padding-top: 0;">
+        <div class="stats-grid reveal">
+            <div class="stat-card">
+                <i class="fas fa-star"></i>
+                <div class="stat-number"><span class="count" data-target="311">0</span>+</div>
+                <div class="stat-label">5-Star Reviews</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-heart"></i>
+                <div class="stat-number"><span class="count" data-target="4">0</span>.<span class="count" data-target="6">0</span></div>
+                <div class="stat-label">Average Rating</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-calendar-alt"></i>
+                <div class="stat-number"><span class="count" data-target="7">0</span></div>
+                <div class="stat-label">Days a Week</div>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-smile-beam"></i>
+                <div class="stat-number"><span class="count" data-target="1500">0</span>+</div>
+                <div class="stat-label">Happy Clients</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="bg-light">
+        <div class="section-header reveal">
+            <span class="eyebrow">The Pink Dream Difference</span>
+            <h2>Why Miami Chooses Us</h2>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card reveal" style="transition-delay: 0.1s;">
+                <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Pristine Hygiene</h3>
+                <p>Your safety is our priority. We use medical-grade sterilization for all tools and single-use liners for every pedicure.</p>
+            </div>
+            <div class="feature-card reveal" style="transition-delay: 0.2s;">
+                <div class="feature-icon"><i class="fas fa-paint-brush"></i></div>
+                <h3>Master Technicians</h3>
+                <p>Our team consists of highly trained artists who stay ahead of the latest trends in acrylics, gels, and nail art.</p>
+            </div>
+            <div class="feature-card reveal" style="transition-delay: 0.3s;">
+                <div class="feature-icon"><i class="fas fa-couch"></i></div>
+                <h3>Luxury Atmosphere</h3>
+                <p>Relax in our beautifully designed salon, featuring plush seating, complimentary beverages, and a serene vibe.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+        <div class="section-header reveal">
+            <span class="eyebrow">Our Expertise</span>
+            <h2>Signature Services</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card reveal" style="transition-delay: 0.1s;">
+                <img src="./image-3.jpg" alt="Acrylic Nails" class="service-img">
+                <div class="service-price">From $65</div>
+                <div class="service-content">
+                    <h3>Flawless Acrylics</h3>
+                    <p>Custom sculpted acrylic extensions tailored to your perfect length and shape, finished with high-gloss polish.</p>
+                    <a href="https://app.squareup.com/appointments/book/tqs8lmfwm81d8d/LEBAE3WWPA78W/start?rwg_token=AFd1xnFzKDfVbPLmzByyUChTh20QBnvDZ9hYVVmKr62BYcXkEfsivos2nUFxboUdi8EIlk-kA86sv0mHV5b8HcqAbRVUtwcksw%3D%3D" target="_blank" class="btn btn-outline" style="width: 100%;">Book Acrylics</a>
+                </div>
+            </div>
+            <div class="service-card reveal" style="transition-delay: 0.2s;">
+                <img src="./image-4.jpg" alt="Gel Manicure" class="service-img">
+                <div class="service-price">From $45</div>
+                <div class="service-content">
+                    <h3>Gel Manicures</h3>
+                    <p>Long-lasting, chip-resistant gel polish applied over meticulous cuticle care for a flawless, natural look.</p>
+                    <a href="https://app.squareup.com/appointments/book/tqs8lmfwm81d8d/LEBAE3WWPA78W/start?rwg_token=AFd1xnFzKDfVbPLmzByyUChTh20QBnvDZ9hYVVmKr62BYcXkEfsivos2nUFxboUdi8EIlk-kA86sv0mHV5b8HcqAbRVUtwcksw%3D%3D" target="_blank" class="btn btn-outline" style="width: 100%;">Book Gel Mani</a>
+                </div>
+            </div>
+            <div class="service-card reveal" style="transition-delay: 0.3s;">
+                <img src="./image-5.jpg" alt="Spa Pedicure" class="service-img">
+                <div class="service-price">From $55</div>
+                <div class="service-content">
+                    <h3>Luxury Pedicures</h3>
+                    <p>The ultimate relaxation. Includes a soothing soak, exfoliation, massage, and perfect polish application.</p>
+                    <a href="https://app.squareup.com/appointments/book/tqs8lmfwm81d8d/LEBAE3WWPA78W/start?rwg_token=AFd1xnFzKDfVbPLmzByyUChTh20QBnvDZ9hYVVmKr62BYcXkEfsivos2nUFxboUdi8EIlk-kA86sv0mHV5b8HcqAbRVUtwcksw%3D%3D" target="_blank" class="btn btn-outline" style="width: 100%;">Book Pedicure</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu / Pricing -->
+    <section>
+        <div class="menu-container reveal">
+            <div class="section-header" style="margin-bottom: 3rem;">
+                <h2>Service Menu</h2>
+                <p>Transparent pricing for premium quality.</p>
+            </div>
+            
+            <h4 style="color: var(--primary); margin-bottom: 1.5rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem;">Nail Enhancements</h4>
+            <div class="menu-item">
+                <span class="menu-name">Acrylic Full Set</span>
+                <div class="menu-leader"></div>
+                <span class="menu-price">$65+</span>
+            </div>
+            <div class="menu-item">
+                <span class="menu-name">Acrylic Fill</span>
+                <div class="menu-leader"></div>
+                <span class="menu-price">$45+</span>
+            </div>
+            <div class="menu-item">
+                <span class="menu-name">Dip Powder (SNS)</span>
+                <div class="menu-leader"></div>
+                <span class="menu-price">$55+</span>
+            </div>
+
+            <h4 style="color: var(--primary); margin: 2.5rem 0 1.5rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem;">Natural Nails</h4>
+            <div class="menu-item">
+                <span class="menu-name">Classic Manicure</span>
+                <div class="menu-leader"></div>
+                <span class="menu-price">$25</span>
+            </div>
+            <div class="menu-item">
+                <span class="menu-name">Gel Manicure</span>
+                <div class="menu-leader"></div>
+                <span class="menu-price">$45</span>
+            </div>
+            
+            <h4 style="color: var(--primary); margin: 2.5rem 0 1.5rem; border-bottom: 1px solid #eee; padding-bottom: 0.5rem;">Pedicures</h4>
+            <div class="menu-item">
+                <span class="menu-name">Classic Spa Pedicure</span>
+                <div class="menu-leader"></div>
+                <span class="menu-price">$40</span>
+            </div>
+            <div class="menu-item">
+                <span class="menu-name">Pink Dream Signature Pedicure</span>
+                <div class="menu-leader"></div>
+                <span class="menu-price">$65</span>
+            </div>
+            
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="https://app.squareup.com/appointments/book/tqs8lmfwm81d8d/LEBAE3WWPA78W/start?rwg_token=AFd1xnFzKDfVbPLmzByyUChTh20QBnvDZ9hYVVmKr62BYcXkEfsivos2nUFxboUdi8EIlk-kA86sv0mHV5b8HcqAbRVUtwcksw%3D%3D" target="_blank" class="btn btn-primary">View Full Menu & Book</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section style="padding: 0;">
+        <div class="newsletter-section reveal">
+            <h2>Join the VIP List</h2>
+            <p style="color: rgba(255,255,255,0.8);">Subscribe for exclusive offers, seasonal trends, and priority booking.</p>
+            <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn btn-primary" style="background: white; color: var(--accent);">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section>
+        <div class="section-header reveal">
+            <span class="eyebrow">The Artists</span>
+            <h2>Meet Our Experts</h2>
+        </div>
+        <div class="team-grid">
+            <div class="team-card reveal" style="transition-delay: 0.1s;">
+                <img src="./image-6.jpg" alt="Nail Artist" class="team-img">
+                <h3>Isabella</h3>
+                <p>Master Acrylic Specialist</p>
+                <a href="tel:7865424794" class="btn btn-outline" style="padding: 0.5rem 1.5rem;">Book Isabella</a>
+            </div>
+            <div class="team-card reveal" style="transition-delay: 0.2s;">
+                <img src="./image-7.jpg" alt="Nail Artist" class="team-img">
+                <h3>Sophia</h3>
+                <p>Nail Art & Gel Expert</p>
+                <a href="tel:7865424794" class="btn btn-outline" style="padding: 0.5rem 1.5rem;">Book Sophia</a>
+            </div>
+            <div class="team-card reveal" style="transition-delay: 0.3s;">
+                <img src="./image-8.jpg" alt="Nail Artist" class="team-img">
+                <h3>Mia</h3>
+                <p>Spa Pedicure Specialist</p>
+                <a href="tel:7865424794" class="btn btn-outline" style="padding: 0.5rem 1.5rem;">Book Mia</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Luxury Photo Gallery (Bento Box) -->
+    <section id="gallery">
+        <div class="section-header reveal">
+            <span class="eyebrow">Portfolio</span>
+            <h2>Our Masterpieces</h2>
+        </div>
+        <div class="bento-grid reveal">
+            <div class="bento-item span-2x2">
+                <img src="./image-1.jpg" alt="Gallery Image 1">
+                <div class="bento-overlay"><h4>Flawless Finish</h4></div>
+            </div>
+            <div class="bento-item span-2x1">
+                <img src="./image-2.jpg" alt="Gallery Image 2">
+                <div class="bento-overlay"><h4>Precision Care</h4></div>
+            </div>
+            <div class="bento-item">
+                <img src="./image-3.jpg" alt="Gallery Image 3">
+                <div class="bento-overlay"><h4>Acrylic Art</h4></div>
+            </div>
+            <div class="bento-item">
+                <img src="./image-4.jpg" alt="Gallery Image 4">
+                <div class="bento-overlay"><h4>Gel Perfection</h4></div>
+            </div>
+            <div class="bento-item span-1x2">
+                <img src="./image-5.jpg" alt="Gallery Image 5">
+                <div class="bento-overlay"><h4>Spa Day</h4></div>
+            </div>
+            <div class="bento-item">
+                <img src="./image-6.jpg" alt="Gallery Image 6">
+                <div class="bento-overlay"><h4>Details</h4></div>
+            </div>
+            <div class="bento-item span-2x1">
+                <img src="./image-7.jpg" alt="Gallery Image 7">
+                <div class="bento-overlay"><h4>Elegance</h4></div>
+            </div>
+            <div class="bento-item">
+                <img src="./image-8.jpg" alt="Gallery Image 8">
+                <div class="bento-overlay"><h4>Signature Look</h4></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Spotlight (Before & After) -->
+    <section class="bg-light">
+        <div class="section-header reveal">
+            <span class="eyebrow">Transformations</span>
+            <h2>Client Spotlight</h2>
+        </div>
+        <div class="spotlight-grid">
+            <div class="spotlight-card reveal">
+                <div class="spotlight-badge">Before</div>
+                <img src="./image-13.jpg" alt="Before Nails">
+            </div>
+            <div class="spotlight-card reveal" style="transition-delay: 0.2s;">
+                <div class="spotlight-badge" style="background: var(--primary); color: white;">After</div>
+                <img src="./image-14.jpg" alt="After Nails">
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Feed -->
+    <section>
+        <div class="section-header reveal">
+            <span class="eyebrow">On The Gram</span>
+            <h2>Follow Our Journey</h2>
+        </div>
+        <div class="social-grid reveal">
+            <div class="social-item">
+                <img src="./image-9.jpg" alt="Instagram Post">
+                <div class="social-hover"><i class="fas fa-heart"></i> 124</div>
+            </div>
+            <div class="social-item">
+                <img src="./image-10.jpg" alt="Instagram Post">
+                <div class="social-hover"><i class="fas fa-heart"></i> 89</div>
+            </div>
+            <div class="social-item">
+                <img src="./image-11.jpg" alt="Instagram Post">
+                <div class="social-hover"><i class="fas fa-heart"></i> 215</div>
+            </div>
+            <div class="social-item">
+                <img src="./image-12.jpg" alt="Instagram Post">
+                <div class="social-hover"><i class="fas fa-heart"></i> 156</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section id="reviews" class="bg-light">
+        <div class="section-header reveal">
+            <span class="eyebrow">Testimonials</span>
+            <h2>What Our Clients Say</h2>
+            <p>Rated 4.6 out of 5 stars from 311 reviews.</p>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card reveal" style="transition-delay: 0.1s;">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p>"Absolutely love this place! The staff is incredibly welcoming and my acrylics have never looked better. They pay so much attention to detail. Highly recommend!"</p>
+                <h4>- Sarah M.</h4>
+            </div>
+            <div class="review-card reveal" style="transition-delay: 0.2s;">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                </div>
+                <p>"Best pedicure in Cutler Bay hands down. The salon is super clean, relaxing, and they really take their time. I leave feeling like a new person every time."</p>
+                <h4>- Jessica R.</h4>
+            </div>
+            <div class="review-card reveal" style="transition-delay: 0.3s;">
+                <div class="stars">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p>"I've been coming here for months for my gel manicures. They last forever without chipping and the color selection is huge. The customer service is top notch."</p>
+                <h4>- Amanda T.</h4>
+            </div>
+        </div>
+        <div class="text-center reveal" style="text-align: center;">
+            <a href="https://www.google.com/maps/search/Pink%20Dream%20Nails%20%26%20Beauty%20-%20Cutler%20Bay%20(US1)%2020910%20S%20Dixie%20Hwy%20Miami%20FL" target="_blank" class="btn btn-outline">Leave a Review on Google</a>
+        </div>
+    </section>
+
+    <!-- Map & Hours -->
+    <section>
+        <div class="location-grid">
+            <div class="reveal">
+                <h2 style="margin-bottom: 2rem;">Visit Us</h2>
+                <iframe src="https://maps.google.com/maps?q=20910%20S%20Dixie%20Hwy%2C%20Miami%2C%20FL%2033189%2C%20USA&t=&z=15&ie=UTF8&iwloc=&output=embed" style="border:0;width:100%;height:400px;border-radius:var(--radius-lg); filter: grayscale(20%) contrast(1.2);" allowfullscreen loading="lazy"></iframe>
+            </div>
+            <div class="hours-card reveal">
+                <h3 style="margin-bottom: 2rem; text-align: center;">Hours of Operation</h3>
+                <div class="hours-row">
+                    <strong>Monday</strong>
+                    <span>9:00 AM – 9:00 PM</span>
+                </div>
+                <div class="hours-row">
+                    <strong>Tuesday</strong>
+                    <span style="color: var(--primary); font-weight: 700;">9:00 AM – 11:00 PM</span>
+                </div>
+                <div class="hours-row">
+                    <strong>Wednesday</strong>
+                    <span>9:00 AM – 9:00 PM</span>
+                </div>
+                <div class="hours-row">
+                    <strong>Thursday</strong>
+                    <span>9:00 AM – 9:00 PM</span>
+                </div>
+                <div class="hours-row">
+                    <strong>Friday</strong>
+                    <span>9:00 AM – 9:00 PM</span>
+                </div>
+                <div class="hours-row">
+                    <strong>Saturday</strong>
+                    <span>9:00 AM – 9:00 PM</span>
+                </div>
+                <div class="hours-row">
+                    <strong>Sunday</strong>
+                    <span>10:00 AM – 6:00 PM</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="bg-light">
+        <div class="section-header reveal">
+            <span class="eyebrow">Got Questions?</span>
+            <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq-container reveal">
+            <div class="faq-item">
+                <div class="faq-question">Do I need an appointment or do you take walk-ins? <i class="fas fa-chevron-down" style="transition: transform 0.3s;"></i></div>
+                <div class="faq-answer">While we do accept walk-ins based on availability, we highly recommend booking an appointment in advance to guarantee your spot, especially on weekends and our extended Tuesday hours.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">What is the difference between Gel and Acrylic? <i class="fas fa-chevron-down" style="transition: transform 0.3s;"></i></div>
+                <div class="faq-answer">Acrylics are a mix of liquid and powder that harden to create a strong extension over your natural nail. Gel polish is painted on like regular polish but cured under a UV light for a long-lasting, chip-free finish on your natural nails.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">How do you sanitize your tools? <i class="fas fa-chevron-down" style="transition: transform 0.3s;"></i></div>
+                <div class="faq-answer">We strictly adhere to state board regulations. All metal implements are scrubbed, disinfected, and sterilized in a medical-grade autoclave. We also use disposable liners for all pedicure bowls and single-use files/buffers.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Do you offer nail art? <i class="fas fa-chevron-down" style="transition: transform 0.3s;"></i></div>
+                <div class="faq-answer">Yes! Our talented technicians can create a wide variety of nail art, from simple French tips and ombre to intricate hand-painted designs and 3D embellishments. Please mention nail art when booking so we allocate enough time.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Banner -->
+    <section class="final-cta reveal">
+        <h2>Ready for your dream nails?</h2>
+        <p style="color: white; font-size: 1.2rem; margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">Step into luxury and let our experts pamper you. Appointments fill up fast, secure your spot today.</p>
+        <a href="https://app.squareup.com/appointments/book/tqs8lmfwm81d8d/LEBAE3WWPA78W/start?rwg_token=AFd1xnFzKDfVbPLmzByyUChTh20QBnvDZ9hYVVmKr62BYcXkEfsivos2nUFxboUdi8EIlk-kA86sv0mHV5b8HcqAbRVUtwcksw%3D%3D" target="_blank" class="btn btn-primary" style="background: white; color: var(--accent); font-size: 1.2rem; padding: 1.2rem 3rem;">Book Your Visit Now</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <a href="#" class="footer-logo"><i class="fas fa-gem" style="color: var(--primary);"></i> Pink Dream</a>
+                <p style="color: rgba(255,255,255,0.7); max-width: 300px;">Elevating everyday style with flawless acrylics, gels, and luxurious pedicures in Cutler Bay, Miami.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Services & Menu</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact Us</h4>
+                <ul style="color: rgba(255,255,255,0.7);">
+                    <li style="display: flex; gap: 10px;"><i class="fas fa-map-marker-alt" style="margin-top: 5px; color: var(--primary);"></i> 20910 S Dixie Hwy,<br>Miami, FL 33189, USA</li>
+                    <li style="display: flex; gap: 10px; margin-top: 1rem;"><i class="fas fa-phone" style="margin-top: 5px; color: var(--primary);"></i> <a href="tel:7865424794">(786) 542-4794</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect Instantly</h4>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://app.squareup.com/appointments/book/tqs8lmfwm81d8d/LEBAE3WWPA78W/start" alt="Scan to Connect" class="qr-code">
+                <div class="footer-socials">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2023 Pink Dream Nails & Beauty. Built by SiteFlow
+        </div>
+    </footer>
+
+    <!-- Mobile Sticky CTA -->
+    <div class="mobile-sticky-cta">
+        <a href="https://app.squareup.com/appointments/book/tqs8lmfwm81d8d/LEBAE3WWPA78W/start?rwg_token=AFd1xnFzKDfVbPLmzByyUChTh20QBnvDZ9hYVVmKr62BYcXkEfsivos2nUFxboUdi8EIlk-kA86sv0mHV5b8HcqAbRVUtwcksw%3D%3D" target="_blank">BOOK NOW</a>
+    </div>
+
+    <!-- Floating Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <button class="chat-fab" id="chatFab"><i class="fas fa-comment-dots"></i></button>
+        <div class="chat-panel" id="chatPanel">
+            <div class="chat-header">
+                <img src="./image-1.jpg" alt="Support">
+                <div><h4>Support Team</h4><span class="online-dot"></span> Online</div>
+                <button class="chat-close" id="chatClose"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-body" id="chatBody">
+                <div class="chat-bubble incoming">Hi there! How can we help you at Pink Dream Nails & Beauty today?<br><small>Just now</small></div>
+            </div>
+            <div class="chat-quick-replies" id="chatReplies">
+                <button data-reply="hours">Hours?</button>
+                <button data-reply="location">Location?</button>
+                <button data-reply="services">Services?</button>
+                <button data-reply="whatsapp">WhatsApp Us</button>
+                <button data-reply="review">Leave a Review</button>
+            </div>
+            <div class="chat-input">
+                <input type="text" placeholder="Type a message..." id="chatInputText">
+                <button id="chatSubmitBtn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Promo Popup -->
+    <div class="promo-popup" id="promoPopup">
+        <div class="promo-content">
+            <button class="promo-close" id="promoClose"><i class="fas fa-times"></i></button>
+            <h2 style="margin-bottom: 1rem;">Get 15% Off!</h2>
+            <p>Claim 15% off your first visit when you join our VIP list today.</p>
+            <input type="email" placeholder="Enter your email" style="width: 100%; padding: 1rem; border-radius: 8px; border: 1px solid #ccc; margin-bottom: 1rem; font-family: var(--font-body);">
+            <button class="btn btn-primary" style="width: 100%;" onclick="document.getElementById('promoPopup').style.display='none'; alert('Offer Claimed!');">Claim Offer</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // 1. Preloader
+        try {
+            window.addEventListener('load', () => {
+                setTimeout(() => {
+                    const preloader = document.getElementById('preloader');
+                    preloader.style.opacity = '0';
+                    preloader.style.visibility = 'hidden';
+                    setTimeout(() => preloader.remove(), 800);
+                }, 1000);
+            });
+        } catch(e) { console.warn(e); }
+
+        // 2. Navbar Scroll Effect
+        try {
+            const navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+        } catch(e) { console.warn(e); }
+
+        // 3. Open/Closed Badge Logic
+        try {
+            function updateStatus() {
+                const now = new Date();
+                // Using local time for simplicity. Miami is EST.
+                const day = now.getDay(); // 0 = Sun, 1 = Mon, 2 = Tue...
+                const hour = now.getHours();
+                let isOpen = false;
+
+                if (day >= 1 && day <= 6) { // Mon-Sat
+                    if (day === 2) { // Tue: 9am - 11pm (23:00)
+                        if (hour >= 9 && hour < 23) isOpen = true;
+                    } else { // Mon, Wed, Thu, Fri, Sat: 9am - 9pm (21:00)
+                        if (hour >= 9 && hour < 21) isOpen = true;
+                    }
+                } else if (day === 0) { // Sun: 10am - 6pm (18:00)
+                    if (hour >= 10 && hour < 18) isOpen = true;
+                }
+
+                const badge = document.getElementById('statusBadge');
+                const text = document.getElementById('statusText');
+                if (isOpen) {
+                    badge.classList.remove('closed');
+                    badge.classList.add('open');
+                    text.textContent = 'OPEN NOW';
+                } else {
+                    badge.classList.remove('open');
+                    badge.classList.add('closed');
+                    text.textContent = 'CLOSED';
+                }
+            }
+            updateStatus();
+            setInterval(updateStatus, 60000); // Check every minute
+        } catch(e) { console.warn(e); }
+
+        // 4. Scroll Reveal (IntersectionObserver)
+        try {
+            const revealElements = document.querySelectorAll('.reveal');
+            const revealObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('revealed');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { root: null, threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+            revealElements.forEach(el => revealObserver.observe(el));
+        } catch(e) { console.warn(e); }
+
+        // 5. Animated Stats Counter
+        try {
+            const counters = document.querySelectorAll('.count');
+            const statsObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = +entry.target.getAttribute('data-target');
+                        const duration = 2000; // 2 seconds
+                        const start = performance.now();
+                        
+                        const updateCounter = (currentTime) => {
+                            const elapsed = currentTime - start;
+                            const progress = Math.min(elapsed / duration, 1);
+                            // Easing function (easeOutExpo)
+                            const easeProgress = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+                            
+                            const currentVal = Math.floor(easeProgress * target);
+                            entry.target.innerText = currentVal;
+                            
+                            if (progress < 1) {
+                                requestAnimationFrame(updateCounter);
+                            } else {
+                                entry.target.innerText = target;
+                            }
+                        };
+                        requestAnimationFrame(updateCounter);
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            counters.forEach(counter => statsObserver.observe(counter));
+        } catch(e) { console.warn(e); }
+
+        // 6. FAQ Accordion
+        try {
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    const isActive = item.classList.contains('active');
+                    // Close all
+                    faqItems.forEach(faq => faq.classList.remove('active'));
+                    // Open clicked if it wasn't active
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
+        } catch(e) { console.warn(e); }
+
+        // 7. Chat Widget Logic
+        try {
+            const chatFab = document.getElementById('chatFab');
+            const chatPanel = document.getElementById('chatPanel');
+            const chatClose = document.getElementById('chatClose');
+            const chatBody = document.getElementById('chatBody');
+            const chatReplies = document.getElementById('chatReplies');
+            
+            function toggleChat() {
+                const isOpen = chatPanel.classList.contains('open');
+                if (isOpen) {
+                    chatPanel.classList.remove('open');
+                    chatFab.innerHTML = '<i class="fas fa-comment-dots"></i>';
+                } else {
+                    chatPanel.classList.add('open');
+                    chatFab.innerHTML = '<i class="fas fa-times"></i>';
+                }
+            }
+
+            chatFab.addEventListener('click', toggleChat);
+            chatClose.addEventListener('click', toggleChat);
+
+            function addMessage(text, type, isHtml = false) {
+                const bubble = document.createElement('div');
+                bubble.className = `chat-bubble ${type}`;
+                if (isHtml) {
+                    bubble.innerHTML = text + '<br><small>Just now</small>';
+                } else {
+                    bubble.innerHTML = text + '<br><small>Just now</small>';
+                }
+                chatBody.appendChild(bubble);
+                chatBody.scrollTop = chatBody.scrollHeight;
+            }
+
+            chatReplies.addEventListener('click', (e) => {
+                if (e.target.tagName === 'BUTTON') {
+                    const replyType = e.target.getAttribute('data-reply');
+                    addMessage(e.target.innerText, 'outgoing');
+                    
+                    setTimeout(() => {
+                        let response = "";
+                        let isHtml = false;
+                        switch(replyType) {
+                            case 'hours':
+                                response = "We are open Mon-Sat 9am-9pm, Tuesdays until 11pm, and Sundays 10am-6pm!";
+                                break;
+                            case 'location':
+                                response = "We are located at 20910 S Dixie Hwy, Miami, FL 33189.";
+                                break;
+                            case 'services':
+                                response = "We offer Acrylics, Gel Manicures, Spa Pedicures, and custom Nail Art.";
+                                break;
+                            case 'whatsapp':
+                                response = `<a href="https://wa.me/7865424794" target="_blank" style="text-decoration: underline; color: white; font-weight:bold;">💬 Click here to chat on WhatsApp!</a>`;
+                                isHtml = true;
+                                break;
+                            case 'review':
+                                response = `<a href="https://www.google.com/maps/search/Pink%20Dream%20Nails%20%26%20Beauty%20-%20Cutler%20Bay%20(US1)%2020910%20S%20Dixie%20Hwy%20Miami%20FL" target="_blank" style="text-decoration: underline; color: white; font-weight:bold;">Click here to leave a Google Review!</a>`;
+                                isHtml = true;
+                                break;
+                        }
+                        addMessage(response, 'incoming', isHtml);
+                    }, 600);
+                }
+            });
+
+            document.getElementById('chatSubmitBtn').addEventListener('click', () => {
+                const input = document.getElementById('chatInputText');
+                if(input.value.trim() !== "") {
+                    addMessage(input.value, 'outgoing');
+                    input.value = "";
+                    setTimeout(() => {
+                        addMessage("Thanks for your message! Please call us at (786) 542-4794 for immediate assistance.", 'incoming');
+                    }, 1000);
+                }
+            });
+        } catch(e) { console.warn(e); }
+
+        // 8. Promo Popup (Delayed)
+        try {
+            setTimeout(() => {
+                const popup = document.getElementById('promoPopup');
+                if(popup && !sessionStorage.getItem('promoSeen')) {
+                    popup.style.display = 'flex';
+                    sessionStorage.setItem('promoSeen', 'true');
+                }
+            }, 8000); // Show after 8 seconds
+
+            document.getElementById('promoClose').addEventListener('click', () => {
+                document.getElementById('promoPopup').style.display = 'none';
+            });
+        } catch(e) { console.warn(e); }
+
+        // 9. Mobile Menu Toggle (HTML Structure provided, adding basic JS just in case)
+        try {
+            const hamburgerBtn = document.getElementById('hamburgerBtn');
+            const mobileMenu = document.getElementById('mobileMenu');
+            const mobileMenuClose = document.getElementById('mobileMenuClose');
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+
+            function toggleMobileMenu() {
+                mobileMenu.classList.toggle('active');
+            }
+
+            if(hamburgerBtn) hamburgerBtn.addEventListener('click', toggleMobileMenu);
+            if(mobileMenuClose) mobileMenuClose.addEventListener('click', toggleMobileMenu);
+            
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.remove('active');
+                });
+            });
+        } catch(e) { console.warn(e); }
+
+        // 10. CRITICAL GLOBAL MODAL CLOSE LISTENER
+        try {
+            document.body.addEventListener('click', e => { 
+                if(e.target.closest('.close-modal, .modal-close, .close, [aria-label="Close"]') || e.target.classList.contains('modal-overlay') || e.target.classList.contains('promo-popup')) { 
+                    const m = e.target.closest('.modal, .popup, #promoPopup, .fixed'); 
+                    if(m) m.style.display = 'none'; 
+                    else document.querySelectorAll('.modal, .popup, #promoPopup').forEach(p=>p.style.display='none'); 
+                } 
+            });
+        } catch(e) { console.warn(e); }
+
+    </script>
+
+<script>
+/* ═══ SITEFLOW BULLETPROOF MOBILE MENU ═══ */
+(function() {
+  try {
+    // Find the hamburger button — try EVERY known selector
+    var hamburger = document.querySelector('.hamburger')
+      || document.querySelector('.menu-toggle')
+      || document.querySelector('.mobile-menu-btn')
+      || document.querySelector('.nav-toggle')
+      || document.querySelector('[class*="hamburger"]')
+      || document.querySelector('[class*="menu-btn"]')
+      || document.querySelector('[class*="menu-toggle"]')
+      || document.querySelector('button[aria-label*="menu" i]')
+      || document.querySelector('nav button');
+
+    // Find the mobile menu overlay — try EVERY known selector
+    var mobileMenu = document.querySelector('.mobile-menu')
+      || document.querySelector('.nav-menu')
+      || document.querySelector('.mobile-nav')
+      || document.querySelector('.menu-overlay')
+      || document.querySelector('[class*="mobile-menu"]')
+      || document.querySelector('[class*="mobile-nav"]')
+      || document.querySelector('[class*="nav-overlay"]');
+
+    // If the AI didn't create a mobile menu at all, BUILD ONE from the desktop nav links
+    if (hamburger && !mobileMenu) {
+      var navLinks = document.querySelectorAll('.nav-links a, .desktop-nav a, nav ul a, nav a:not(.logo):not([class*="logo"])');
+      if (navLinks.length > 0) {
+        mobileMenu = document.createElement('div');
+        mobileMenu.className = 'mobile-menu';
+        mobileMenu.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.97);z-index:200;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.5rem;transform:translateX(100%);transition:transform 0.3s ease;';
+        // Add close button
+        var closeBtn = document.createElement('button');
+        closeBtn.className = 'close-menu';
+        closeBtn.innerHTML = '<i class="fas fa-times" style="font-size:28px;color:white;"></i>';
+        closeBtn.style.cssText = 'position:absolute;top:20px;right:20px;background:none;border:none;cursor:pointer;z-index:201;';
+        mobileMenu.appendChild(closeBtn);
+        // Clone all nav links
+        navLinks.forEach(function(link) {
+          var clone = link.cloneNode(true);
+          clone.style.cssText = 'color:white;text-decoration:none;font-size:1.3rem;display:block;padding:0.75rem 0;';
+          mobileMenu.appendChild(clone);
+        });
+        document.body.appendChild(mobileMenu);
+      }
+    }
+
+    if (!hamburger || !mobileMenu) return;
+
+    // Remove any existing click handlers by cloning the hamburger
+    var newHamburger = hamburger.cloneNode(true);
+    hamburger.parentNode.replaceChild(newHamburger, hamburger);
+    hamburger = newHamburger;
+
+    function openMenu() {
+      mobileMenu.classList.add('active');
+      mobileMenu.style.transform = 'translateX(0)';
+      hamburger.innerHTML = '<i class="fas fa-times" style="font-size:28px;"></i>';
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      mobileMenu.classList.remove('active');
+      mobileMenu.style.transform = 'translateX(100%)';
+      hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+      document.body.style.overflow = '';
+    }
+
+    hamburger.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      if (mobileMenu.classList.contains('active')) { closeMenu(); } else { openMenu(); }
+    });
+
+    // Close when clicking any link inside the mobile menu
+    mobileMenu.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() { closeMenu(); });
+    });
+
+    // Close when clicking any close button inside the menu
+    mobileMenu.querySelectorAll('.close-menu, .mobile-close, [class*="close"], button').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        closeMenu();
+      });
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('active')) { closeMenu(); }
+    });
+
+  } catch(e) { console.error('[SiteFlow Menu]', e); }
+})();
+</script>
+
+<script>
+/* ═══ SITEFLOW: WRAP AI JAVASCRIPT IN SAFETY NET ═══ */
+/* If the AI's JS has bugs (open/closed badge, stats counter, etc.), */
+/* this ensures the menu and core features still work. */
+(function() {
+  try {
+    // Force remove any scroll-reveal opacity:0 from hero after 2 seconds
+    setTimeout(function() {
+      var hero = document.querySelector('.hero, #hero, section:first-of-type');
+      if (hero) {
+        hero.querySelectorAll('*').forEach(function(el) {
+          var style = window.getComputedStyle(el);
+          if (style.opacity === '0') {
+            el.style.opacity = '1';
+            el.style.transform = 'none';
+          }
+        });
+      }
+    }, 2000);
+
+    // Force fix: if preloader is STILL showing after 4 seconds, kill it
+    setTimeout(function() {
+      var preloader = document.querySelector('.preloader, #preloader, .loading-screen, .loader-overlay, [class*="preload"]');
+      if (preloader) {
+        preloader.style.opacity = '0';
+        preloader.style.pointerEvents = 'none';
+        setTimeout(function() { if (preloader.parentNode) preloader.parentNode.removeChild(preloader); }, 500);
+      }
+    }, 4000);
+  } catch(e) { console.error('[SiteFlow Safety]', e); }
+})();
+</script>
+</body>
+</html>
